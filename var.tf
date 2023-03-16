@@ -1,5 +1,5 @@
 variable "region" {
-  default = "eu-west-1"
+  default = "eu-west-2"
 }
 
 variable "main_vpc_cidr" {
@@ -7,12 +7,12 @@ variable "main_vpc_cidr" {
 }
 
 variable "public_subnets" {
-  type    = list
+  type    = list(string)
   default = ["10.0.1.0/24", "10.0.2.0/24"]
 }
 
 variable "private_subnets" {
-  type    = list
+  type    = list(string)
   default = ["10.0.101.0/24", "10.0.102.0/24"]
 }
 
